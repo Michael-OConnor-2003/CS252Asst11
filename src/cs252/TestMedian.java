@@ -12,7 +12,7 @@ public class TestMedian {
         }
         int n = Integer.parseInt(args[0]);
         boolean result = test(n);
-        if (result) {
+        if (result == true) {
             System.out.println("Passed all " + n + " tests.");
         }
     }
@@ -20,9 +20,9 @@ public class TestMedian {
 
     private static boolean test(int numTests) {
         double[] inputs = { 1.0, 4.0, 6.5, 2.4, 24.0, 5.0 };
-        double[] expected = { 1.0, 2.5, 3.2, 4.0, 4.0, 4.5 };
+        double[] expected = { 1.0, 2.5, 4.0, 3.2, 4.0, 4.5 };
 
-        for (int i = 0; i < numTests; ++i) {
+        for (int i = 0; i < numTests; i++) {
             double[] trimmedInputs = Arrays.copyOf(inputs, i+1);
             Median med = new Median(trimmedInputs);
             double avg = med.median();
