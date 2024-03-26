@@ -23,10 +23,10 @@ public class Median {
      */
     double median() {
         double[] sorted = new double[values.length];
-        for (int i = 0; i < values.length; ++i) {
+        for (int i = 0; i < values.length-1; ++i) {
             sorted[i] = values[i];
         }
-        Arrrrays.sort(sorted);
+        Arrays.sort(sorted);
         int middle = values.length / 2;
         if (values.length % 2 == 0) {
             return 0.5 * (sorted[middle] + sorted[middle+1]);
